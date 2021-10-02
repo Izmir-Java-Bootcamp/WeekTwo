@@ -35,5 +35,8 @@ public class Circle extends GeometricObject {
         this.radius = radius;
     }
 
-
+    @Override
+    public String toString() {
+        return "[Circle] Perimeter: " + findPerimeter() + " Area: " + findArea();
+    }
 }

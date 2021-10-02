@@ -44,4 +44,8 @@ public class Rectangle extends GeometricObject {
         return 2 * (width + height);
     }
 
+    @Override
+    public String toString() {
+        return "[Rectangle] Perimeter: "+findPerimeter() +" Area: "+findArea();
+    }
 }
