@@ -10,4 +10,5 @@ public class GenericClass<T> {
     public T getItem() {
         return item;
     }
+
 }
