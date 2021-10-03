@@ -4,6 +4,7 @@ import com.kodluyoruz.generics.model.Circle;
 import com.kodluyoruz.generics.model.GeometricObject;
 import com.kodluyoruz.generics.model.Rectangle;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class MainList {
@@ -56,9 +57,22 @@ public class MainList {
 //        names.add("mert");
 //        printList(names);
 
+        System.out.println("---");
+        String[] strings = toArray(names);
+        System.out.println(Arrays.toString(strings));
 
     }
 
+    private static <T> T[] toArray(List<T> list) {
+        if (list == null || list.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
+        T[] array = (T[]) Array.newInstance(list.get(0).getClass(), list.size());
+        for (int i = 0; i < list.size(); i++) {
+            array[i] = list.get(i);
+        }
+        return array;
+    }
 
     private static void printGeoArray(GeometricObject[] arr) {
         for (GeometricObject geo :
