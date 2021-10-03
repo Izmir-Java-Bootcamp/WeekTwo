@@ -39,7 +39,7 @@ public class Circle extends GeometricObject {
 
     @Override
     public String toString() {
-        return "[Circle] Perimeter: " + findPerimeter() + " Area: " + findArea();
+        return "[Circle] Radius: " + radius + " Perimeter: " + findPerimeter() + " Area: " + findArea();
     }
 
     @Override
